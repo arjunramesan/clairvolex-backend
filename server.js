@@ -20,7 +20,6 @@ app.post("/books", authenticateToken, (req, res) => {
 app.post('/generate-token', (req, res) => {
    generateToken(req.body, res)
 });
-
 // Error handling middleware
 app.use((req, res, next) => {
   res.status(404).json({ message: "Endpoint not found" });
