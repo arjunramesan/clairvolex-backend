@@ -4,10 +4,11 @@ const { searchBooks } = require("./controllers/bookController");
 const { generateToken, authenticateToken } = require("./controllers/tokenController");
 require('dotenv').config();
 
-
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT;
 app.use(bodyParser.json());
+app.use(cors());
 
 // API Routes
 app.get("/", (req, res) => {

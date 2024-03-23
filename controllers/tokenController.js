@@ -13,7 +13,7 @@ function generateToken(data, res) {
   const payload = {
     useremail: useremail,
   };
-  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "24h" }); // Token expires in 24 hour
+  const token = jwt.sign(payload, SECRET_KEY, { expiresIn: "1h" }); // Token expires in 1 hour
   res.json({ token: token });
 }
 

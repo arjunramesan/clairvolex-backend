@@ -17,7 +17,7 @@ function searchBooks(criteria, res) {
   if (title) sql += ` AND title LIKE '%${title}%'`;
   if (author) sql += ` AND author LIKE '%${author}%'`;
   if (publishedFrom && publishedTo)
-    sql += ` AND publication_date BETWEEN '${publishedFrom}' AND '${publishedTo}'`;
+    sql += ` AND DATE_FORMAT(publication_date, '%Y-%m-%d') BETWEEN '${publishedFrom}' AND '${publishedTo}'`;
   if (genre) sql += ` AND genre='${genre}'`;
   if (inStock) sql += ` AND stock_count > 0`;
 
