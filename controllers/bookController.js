@@ -20,9 +20,7 @@ function searchBooks(criteria, res) {
     sql += ` AND DATE_FORMAT(publication_date, '%Y-%m-%d') BETWEEN '${publishedFrom}' AND '${publishedTo}'`;
   if (genre) sql += ` AND genre='${genre}'`;
   if (inStock) sql += ` AND stock_count > 0`;
-
   sql += ` ORDER BY ${sortOrder}`;
-  
 
   const offset = (page - 1) * size;
   sql += ` LIMIT ${size} OFFSET ${offset}`;
