@@ -15,13 +15,12 @@ The Bookstore API is a RESTful web service for managing books in a bookstore. It
 - Express.js
 - MySQL
 - JWT (JSON Web Tokens)
-- Swagger (OpenAPI Specification)
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/yourusername/bookstore-api.git`
 2. Navigate to the project directory: `cd bookstore-api`
 3. Install dependencies: `npm install`
-4. Set up the MySQL database and configure the connection in `config.js`.
+4. Set up the MySQL database, and other secrets and configure the connection in `.env`.
 5. Start the server: `npm start`
 
 ## Usage
